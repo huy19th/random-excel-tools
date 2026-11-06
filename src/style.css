@@ -1,0 +1,29 @@
+.dropzone {
+  border: 2px dashed var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.dropzone.active,
+.dropzone:hover {
+  border-color: var(--pico-primary);
+  background: color-mix(in srgb, var(--pico-primary) 8%, transparent);
+}
+.dropzone { display: block; margin-bottom: var(--pico-spacing); }
+.dropzone:focus-within { outline: 2px solid var(--pico-primary); outline-offset: 2px; }
+/* Visually hidden but still focusable, so the zone works with the keyboard. */
+.dropzone input { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+
+.file-card header { display: flex; gap: 0.5rem; align-items: center; }
+.file-card header strong { flex: 1; overflow-wrap: anywhere; }
+.file-card header button { margin: 0; padding: 0.25rem 0.6rem; width: auto; }
+
+.sheet-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 0; }
+.sheet-list label { margin: 0; }
+
+.tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+.tools article { margin: 0; }
+.sheet-list .muted { color: var(--pico-muted-color); font-size: 0.875em; }
+.hint { display: block; margin-top: 0.5rem; color: var(--pico-muted-color); }
